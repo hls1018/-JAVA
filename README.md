@@ -71,15 +71,177 @@ Java5.0引入了枚举，枚举限制变量只能是预先设定好的值。使�
 示例：
 
 class FreshJuice {
+
    enum FreshJuiceSize{ SMALL, MEDIUM , LARGE }
+   
    FreshJuiceSize size;
+   
 }
  
 public class FreshJuiceTest {
+
    public static void main(String []args){
+   
       FreshJuice juice = new FreshJuice();
+      
       juice.size = FreshJuice.FreshJuiceSize.MEDIUM  ;
+      
    }
+   
 }
+
+注意：枚举可以单独声明或者声明在类里面。方法、变量、构造函数也可以在枚举中定义。
+
+# Java关键字
+
+下面列出了Java保留字。这些保留字不能用于常量、变量、和任何标识符的名称。
+
+关键字	描述
+
+abstract	抽象方法，抽象类的修饰符
+
+assert	断言条件是否满足
+
+boolean	布尔数据类型
+
+break	跳出循环或者label代码段
+
+byte	8-bit 有符号数据类型
+
+case	switch语句的一个条件
+
+catch	和try搭配捕捉异常信息
+
+char	16-bit Unicode字符数据类型
+
+class	定义类
+
+const	未使用
+
+continue	不执行循环体剩余部分
+
+default	switch语句中的默认分支
+
+do	循环语句，循环体至少会执行一次
+
+double	64-bit双精度浮点数
+
+else	if条件不成立时执行的分支
+
+enum	枚举类型
+
+extends	表示一个类是另一个类的子类
+
+final	表示一个值在初始化之后就不能再改变了
+
+表示方法不能被重写，或者一个类不能有子类
+
+finally	为了完成执行的代码而设计的，主要是为了程序的健壮性和完整性，无论有没有异常发生都执行代码。
+
+float	32-bit单精度浮点数
+
+for	for循环语句
+
+goto	未使用
+
+if	条件语句
+
+implements	表示一个类实现了接口
+
+import	导入类
+
+instanceof	测试一个对象是否是某个类的实例
+
+int	32位整型数
+
+interface	接口，一种抽象的类型，仅有方法和常量的定义
+
+long	64位整型数
+
+native	表示方法用非java代码实现
+
+new	分配新的类实例
+
+package	一系列相关类组成一个包
+
+private	表示私有字段，或者方法等，只能从类内部访问
+
+protected	表示字段只能通过类或者其子类访问
+
+子类或者在同一个包内的其他类
+
+public	表示共有属性或者方法
+
+return	方法返回值
+
+short	16位数字
+
+static	表示在类级别定义，所有实例共享的
+
+strictfp	浮点数比较使用严格的规则
+
+super	表示基类
+
+switch	选择语句
+
+synchronized	表示同一时间只能由一个线程访问的代码块
+
+this	表示调用当前实例
+
+或者调用另一个构造函数
+
+throw	抛出异常
+
+throws	定义方法可能抛出的异常
+
+transient	修饰不要序列化的字段
+
+try	表示代码块要做异常处理或者和finally配合表示是否抛出异常都执行finally中的代码
+
+void	标记方法不返回任何值
+
+volatile	标记字段可能会被多个线程同时访问，而不做同步
+
+while	while循环
+
+# Java注释
+
+类似于C/C++，Java也支持单行以及多行注释。注释中的字符将被Java编译器忽略。
+
+public class HelloWorld {
+
+   /* 这是第一个Java程序
+   
+    *它将打印Hello World
+    
+    * 这是一个多行注释的示例
+    
+    */
+    
+    public static void main(String []args){
+    
+       // 这是单行注释的示例
+       
+       /* 这个也是单行注释的示例 */
+       
+       System.out.println("Hello World");
+       
+    }
+    
+}
+
+# Java 空行
+
+空白行，或者有注释的行，Java编译器都会忽略掉。
+
+# 继承
+在Java中，一个类可以由其他类派生。如果你要创建一个类，而且已经存在一个类具有你所需要的属性或方法，那么你可以将新创建的类继承该类。
+
+利用继承的方法，可以重用已存在类的方法和属性，而不用重写这些代码。被继承的类称为超类（super class），派生类称为子类（subclass）。
     
-    
+# 接口
+
+在Java中，接口可理解为对象间相互通信的协议。接口在继承中扮演着很重要的角色。
+
+接口只定义派生要用到的方法，但是方法的具体实现完全取决于派生类。
+ 
